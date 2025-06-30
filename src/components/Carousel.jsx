@@ -1,37 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { slides } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % (slides.length - 1));
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + (slides.length - 1)) % (slides.length - 1)
-    );
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-
-    tl.to(".slider-item", {
-      x: `-${currentSlide * 63}vw`,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+    if (sliderRef.current) {
+      gsap.to(sliderRef.current, {
+        x: `-${currentSlide * 63}vw`,
+        duration: 1,
+        ease: "power2.inOut",
+      });
+    }
   }, [currentSlide]);
 
   return (
     <div className="relative">
-      <div className="w-full relative lg:h-[60vh] md:h-[40vh] h-[60vh]">
+      <div className="w-full relative lg:h-[60vh] md:h-[40vh] h-[60vh] overflow-hidden">
         <div className="carousel-gradient-left-box md:w-52 w-16 h-full absolute bottom-0 left-0 z-20"></div>
         <div className="carousel-gradient-right-box md:w-52 w-16 h-full absolute bottom-0 right-0 z-20"></div>
-        <div className="absolute w-full -left-[43vw] top-0">
+        <div className="absolute w-full -left-[43vw] top-0" ref={sliderRef}>
           <div className="flex w-full lg:h-[60vh] md:h-[40vh] h-[60vh] items-center gap-[3vw]">
             {slides.map((slide, index) => (
               <div
@@ -54,14 +53,22 @@ const Carousel = () => {
                       </p>
                     </div>
                     <div className="flex-center gap-5">
-                      <p className="text-2xl hidden md:block text-white-50 opacity-80">
-                        Preview Project
-                      </p>
-                      <img
-                        src="/images/arrowupright.svg"
-                        alt="arrow"
-                        className="md:size-10 size-7"
-                      />
+                      <a
+                        href={slide.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white-50 underline"
+                      >
+                        GitHub
+                      </a>
+                      <a
+                        href={slide.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white-50 underline"
+                      >
+                        Live
+                      </a>
                     </div>
                   </div>
                 </div>

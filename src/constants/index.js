@@ -86,44 +86,79 @@ const iconsList = [
     image: "/images/aws.svg",
   },
 ];
-
-const slides = [
+  const slides = [
   {
     id: 1,
-    title: "Sofi",
-    img: "/images/p1.png",
+    title: "Fizzi",
+    img: "/images/image.p9.png",
+    github: "https://github.com/VaibhavDA893/Fizzi-by-vaibhav",
+    live: "https://fizzi-by-vaibhav.vercel.app/"
   },
   {
     id: 2,
-    title: "Jasmina",
-    img: "/images/p2.png",
+    title: "Skate",
+    img: "/images/image.p8.png",
+    github: "https://github.com/VaibhavDA893/Skate-by-vaibhav",
+    live: "https://skate-by-vaibhav.vercel.app/"
   },
   {
     id: 3,
-    title: "d.tampe",
-    img: "/images/p3.png",
+    title: "Spiltz",
+    img: "/images/image.10.png",
+    github: "https://github.com/VaibhavDA893/Vaibhav-Spiltz",
+    live: "https://vaibhav-spiltz.vercel.app/"
   },
   {
     id: 4,
-    title: "Blimp.gr",
-    img: "/images/p4.png",
+    title: "Two Good Co",
+    img: "/images/image.11.png",
+    github: "https://github.com/VaibhavDA893/TWO-GOOD-CO-BY-VAIBHAV",
+    live: "https://two-good-co-by-vaibhav.vercel.app/"
   },
   {
     id: 5,
-    title: "Hawk Style Design",
-    img: "/images/p5.png",
+    title: "Hotel Odisej",
+    img: "/images/image.12.png",
+    github: "https://github.com/VaibhavDA893/Hotel-Odisej-by-vaibhav",
+    live: "https://hotel-odisej-by-vaibhav.vercel.app/"
   },
   {
     id: 6,
-    title: "Lewis",
-    img: "/images/p6.png",
+    title: "Ochi Design",
+    img: "/images/image.13.png",
+    github: "https://github.com/VaibhavDA893/Ochi-Design-By-vaibhav",
+    live: "https://ochi-design-by-vaibhav.vercel.app/"
+  },
+   {
+    id: 7,
+    title: "Refokus",
+    img: "/images/image.14.png",
+    github: "https://github.com/VaibhavDA893/Refokus-by-vaibhav",
+    live: "https://refokus-by-vaibhav.vercel.app/"
   },
   {
-    id: 7,
-    title: "Sofi",
-    img: "/images/p1.png",
+    id: 8,
+    title: "Mojito Cocktail",
+    img: "/images/image.17.png",
+    github: "https://github.com/VaibhavDA893/MOJITO-COCKTRAIL-BY-VAIBHAV",
+    live: "https://mojito-cocktrail-by-vaibhav.vercel.app/"
   },
+  {
+    id: 9,
+    title: "Award Winning Website",
+    img: "/images/image.16.png",
+    github: "https://github.com/VaibhavDA893/-award-winning-website-by-vaibhav",
+    live: "https://award-winning-website-by-vaibhav.vercel.app/"
+  },
+  {
+    id: 10,
+    title: "Obys Agency",
+    img: "/images/image.15.png",
+    github: "https://github.com/VaibhavDA893/Obys-Agency-by-vaibhav",
+    live: "https://obys-agency-by-vaibhav.vercel.app/"
+  }
 ];
+
 
 const testimonials = [
   {
