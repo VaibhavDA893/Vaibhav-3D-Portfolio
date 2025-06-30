@@ -33,13 +33,13 @@ const About = () => {
                 </div>
                 <div className="mt-5">
                   <h1 className="text-blue-50 md:text-5xl text-3xl">
-                    David JhonSan
+                    Vaibhav Singh
                   </h1>
                   <p className="md:text-2xl mt-2">
-                    I am a San francisco-based product designer with a focus on
-                    web design, illustration, a visual development. I have a
-                    diverse range of experience having worked across various
-                    fields and industries.
+                    
+
+
+I am a passionate fresher with a strong focus on web design, illustration, frontend development, and visual development. I bring a diverse set of creative and technical skills, and I am eager to start my career as a frontend developer, contributing to projects that combine design and technology to deliver engaging user experiences.
                   </p>
                 </div>
               </div>
